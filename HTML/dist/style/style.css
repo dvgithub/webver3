@@ -655,6 +655,56 @@ img {
 }
 /**************** SEARCH RESULT PAGE ****************
 ****************************************************/
+.search-header-title {
+  border-bottom: #d5d5d5 solid 1px;
+  display: inline-block;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0 0 20px 0;
+}
+.search-header-title h1 {
+  float: left;
+  font-size: 30px;
+}
+.search-header-title .product-count {
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: normal;
+  color: #777777;
+  margin: 0 10px;
+}
+.search-header-filter .search-header-filter-title {
+  margin: 7px 15px 0 0;
+  padding: 0 0 20px 0;
+}
+.search-header-filter .search-header-filter-title-wrp,
+.search-header-filter .search-header-filter-display-wrp {
+  float: left;
+}
+.search-header-filter .search-header-filter-display-wrp .search-header-filter-pills {
+  background: white;
+  color: #555555;
+  font-size: 14px;
+  margin: 0 10px 20px 0;
+  padding: 5px 10px;
+  border: #eeeeee solid 1px;
+  border-top: #fe5815 solid 3px;
+}
+.search-header-filter .search-header-filter-display-wrp .search-header-filter-pills i {
+  color: #777777;
+}
+.search-header-filter .search-header-filter-display-wrp .search-header-filter-pills:hover {
+  color: #222222;
+}
+.search-header-filter .search-header-filter-display-wrp .search-header-filter-pills:hover i {
+  color: #222222;
+}
+.search-header-filter.is-true {
+  display: inline-block;
+}
+.search-header-filter.is-hide {
+  display: none;
+}
 .product-list-horizontal .product-card-content {
   margin-bottom: 20px;
   position: relative;
@@ -730,11 +780,17 @@ img {
 .product-list-horizontal .product-card-short-desc p {
   margin-bottom: 0;
 }
+.product-list-horizontal .product-card-right-columns .product-card-price-wrp {
+  display: inline-block;
+}
 .product-list-horizontal .product-card-right-columns .product-card-price-wrp .price-display {
   font-size: 24px;
+  color: #555555;
+  display: block;
 }
 .product-list-horizontal .product-card-right-columns .product-card-price-wrp .price-from {
   color: #777777;
+  display: inline-block;
 }
 .product-list-horizontal .product-card-right-columns .product-card-price-wrp .old-price {
   text-decoration: line-through;
@@ -744,6 +800,13 @@ img {
   font-size: 12px;
   color: #d9534f;
   font-weight: bold;
+}
+.product-list-horizontal .product-card-right-columns .product-card-price-wrp .view-details {
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 5px;
+  float: right;
 }
 @media (min-width: 540px) {
   .product-list-horizontal .product-card-right-columns {
@@ -756,6 +819,134 @@ img {
 }
 .product-list-pagination {
   text-align: center;
+}
+/* FILTER COLUMNS */
+.filter-column-collapse .filter-column-title-wrp {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .filter-column-collapse {
+    background: white;
+    padding: 0 15px;
+    border: #eeeeee solid 1px;
+    margin-bottom: 20px;
+  }
+  .filter-column-collapse .filter-column-title-wrp {
+    display: block;
+    border-top: #e2e2e2 solid 3px;
+    margin: 0 -15px;
+    padding: 10px 15px;
+  }
+  .filter-column-collapse .filter-columns-title-cont {
+    display: inline-block;
+    width: 100%;
+    color: #555555;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .filter-column-collapse .filter-columns-title-cont:hover,
+  .filter-column-collapse .filter-columns-title-cont:active,
+  .filter-column-collapse .filter-columns-title-cont:focus {
+    text-decoration: none;
+  }
+  .filter-container {
+    display: none;
+  }
+}
+.filter-column .filter-box {
+  background: white;
+  border: #e2e2e2 solid 1px;
+  margin-bottom: 20px;
+}
+.filter-column .filter-box-title {
+  padding: 10px 15px;
+  border-top: #eeeeee solid 3px;
+  border-bottom: #eeeeee solid 1px;
+}
+.filter-column .filter-box-title h5 {
+  margin: 0;
+}
+.filter-column .filter-box-cont-wrp {
+  padding: 10px 0;
+}
+.filter-column .filters-list-l1,
+.filter-column .filters-list-l2,
+.filter-column .filters-list-l3 {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.filter-column .filters-list-item {
+  list-style-type: none;
+  padding: 0 15px;
+}
+.filter-column .filters-list-item label {
+  font-weight: normal;
+  color: #555555;
+  display: block;
+}
+.filter-column .filters-list-item .filter {
+  margin-right: 10px;
+}
+.filter-column .filters-list-item a {
+  color: #555555;
+  display: inline-block;
+  padding: 3px 5px;
+}
+.filter-column .filters-list-item a:hover {
+  background: #f4f4f4;
+  text-decoration: none;
+}
+.filter-column .filters-list-item a .icon {
+  font-size: 12px;
+  text-align: right;
+}
+.filter-column .filters-list-item .is-active,
+.filter-column .filters-list-item .is-active:hover {
+  font-weight: bold;
+  /*color: @gray;
+			background: lighten(@gray-lighter, 2%);*/
+  background: #959595;
+  text-decoration: none;
+  color: white;
+  border-radius: 3px;
+}
+.filter-column .filters-list-item .is-active .icon,
+.filter-column .filters-list-item .is-active:hover .icon {
+  color: white;
+}
+.filter-column .filters-list-item .is-active:hover {
+  background: #777777;
+}
+.filter-column .filters-list-item .filter-list-item-link-closed:before,
+.filter-column .filters-list-item .filter-list-item-link-open:before,
+.filter-column .filters-list-item .filter-list-item-link-empty:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  min-width: 15px;
+  /* opacity: .8; */
+  font-variant: normal;
+  text-transform: none;
+  margin: 0;
+  vertical-align: middle;
+}
+.filter-column .filters-list-item .filter-list-item-link-closed:before {
+  content: '\e895';
+}
+.filter-column .filters-list-item .filter-list-item-link-open:before {
+  content: '\e892';
+}
+.filter-column .filters-list-item .filter-list-item-link-empty:before {
+  content: '\e903';
+  font-size: 6px;
+}
+.filter-column .filters-list-l2 .filters-list-item,
+.filter-column .filters-list-l3 .filters-list-item {
+  padding-right: 0;
 }
 /**************** FOOTER****************
 *****************************************/
