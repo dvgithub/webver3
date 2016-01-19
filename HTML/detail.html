@@ -45,30 +45,69 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Project name</a>
+            <a class="navbar-brand logo" href="#"><img src="http://divui.com/Content/images/logo.png"></a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
+                <a href="#" class="dropdown-toggle navbar-pick-place" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Chọn điểm đến <span class="caret"></span></a>
+                <ul class="dropdown-menu dv-dropdown-menu">
+                  <div class="col-md-4">
+                    <li class="dv-dropdown-header">Thái Lan</li>
+                    <li><a href="#">Bangkok</a></li>
+                    <li><a href="#">Pattaya</a></li>
+                    <li><a href="#">Chiengmai</a></li>
+                    <li><a href="#">Phuket</a></li>
+                    <li><a href="#">Krabi</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dv-dropdown-header">Singapore</li>
+                    <li><a href="#">Singapore</a></li>
+                  </div>
+                  <div class="col-md-4">
+                    <li class="dv-dropdown-header">Việt Nam</li>
+                    <li><a href="#">Tp. Hồ Chí Minh</a></li>
+                    <li><a href="#">Đà Nẵng</a></li>
+                    <li><a href="#">Huế</a></li>
+                    <li><a href="#">Hội An</a></li>
+                    <li><a href="#">Nha Trang</a></li>
+                    <li><a href="#">Phú Quốc</a></li>
+                    <li><a href="#">Đà Lạt</a></li>
+                  </div>
+                  <div class="col-md-4">
+                    <li class="dv-dropdown-header">Hongkong</li>
+                    <li><a href="#">Hongkong <span class="label-bs label-warning">MỚI!</span></a></li>
+                    <li role="separator" class="divider"></li></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="country.html">Country</a></li>
+                    <li><a href="city.html">City </a></li>
+                    <li><a href="attraction.html">Attraction</a></li>
+                    <li><a href="collection.html">Collection </a></li>
+                    <li><a href="search-result.html">Search-Result </a></li>
+                    <li><a href="detail.html">Details</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="cart-info.html">Payment</a></li>
+                  </div> 
                 </ul>
               </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="../navbar/">Default</a></li>
-              <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
-              <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+              <li>
+                <a href="#">
+                  <i class="icon icon-cart"></i>Giỏ hàng
+                  <span class="navbar-cart-ammount">6</span>
+                </a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="icon icon-question"></i>Hỗ trợ <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#"><i class="icon icon-phone"></i>Hotline: <strong>0908 1080 98</strong></a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#"><i class="icon  icon-info-circled-2"></i>Câu hỏi thường gặp</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#"><i class="icon icon-email"></i>Liên hệ</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><i class="icon icon-user-6"></i>Đăng nhập/Đăng ký</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -191,18 +230,20 @@
             </div>  
           </div>
         </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Library</a></li>
+                <li class="active">Data</li>
+              </ol>
+            </div>
+          </div>
+        </div>
         <div class="product-content-container container">
           <div class="row">
             <div class="col-md-8">
-              <div class="row">
-                <div class="col-md-12">
-                  <ol class="breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Library</a></li>
-                    <li class="active">Data</li>
-                  </ol>
-                </div>
-              </div>
               <h1 class="product-title">
                 Vé Safari World Bangkok – Tham quan vườn thú mở độc đáo & thưởng thức các show diễn hoành tráng
               </h1>
@@ -501,7 +542,7 @@
                   <p>Cách Bangkok 12 km, Safari World là điểm tham quan hấp dẫn mà du khách không thể bỏ qua trong các chuyến du lịch đến Thái Lan. Đây là vườn thú mở tự nhiên lớn nhất Châu Á với hơn 75 loài động vật có vú, 300 loài chim đến từ châu Phi và Châu Á cùng các loài động vật đặc trưng khắp nơi trên thế giới. Nếu bạn đi cùng gia đình và có em nhỏ thì chắc chắn bạn sẽ phải ghé qua đây để các bé có thể tham gia các trò chơi hấp dẫn, tìm hiểu các loài động vật trên khắp thế giớ</p>
                 </div>
               </section>
-              <section class="highlights">
+              <section class="product-highlights">
                 <h2>Điểm nổi bật</h2>
                 <div class="content list">
                   <ul>
@@ -648,7 +689,31 @@
                 </section>
               </div>
             </div>
-            <div class="col-md-4"></div>     
+            <div class="col-md-4">
+              <div class="sub-col-box why-book">
+             <h4 class="title">Tự tin đặt vé với ĐI VUI</h4>
+             <ul>
+              <li class="icon save">
+                <div class="why-book-cont-wrp">
+                  <h5 class="title">Giá rẻ hơn đặt trực tiếp</h5>
+                  <p>Bạn tiết kiệm được 1 khoảng "kha khá" - từ 10% - 30% cho chuyến đi của mình :)</p>
+                </div>
+              </li>
+              <li class="icon voucher24">
+                <div class="why-book-cont-wrp">
+                  <h5 class="title">Nhận vé trong vòng 24h qua email</h5>
+                  <p>365 ngày kể cả Lễ, Tết hay Chủ nhật, Đi Vui luôn sẵn sàng.</p>
+                </div>                
+              </li>
+               <li class="icon support">
+                <div class="why-book-cont-wrp">
+                  <h5 class="title">Đồng hành cùng bạn suốt chuyến đi</h5>
+                  <p>Cho dù bạn đang ở đâu, vào giờ nào, các chuyên viên tư vấn của ĐI VUI luôn sẵn sàng hỗ trợ bạn.</p>
+                </div>                 
+               </li>
+             </ul>
+            </div>
+            </div>     
           </div>
           <div class="row">
             <div class="col-md-8">
