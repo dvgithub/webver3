@@ -1,0 +1,38 @@
+/**************** IMPORT ****************
+*****************************************/
+.agent-logo {
+  display: block;
+  float: left;
+  margin: 10px 0;
+  padding: 7px 0 0 10px;
+  border-left: #eeeeee solid 1px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #777777;
+}
+.ag-login-wrp {
+  background: white;
+  padding: 24px 30px;
+  border-radius: 6px;
+  border: #eeeeee solid 1px;
+  border-top: #1270b3 solid 5px;
+}
+.ag-login-wrp h2 {
+  margin-top: 0;
+}
+.ag-promote-content {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.ag-hero-img {
+  background: url(https://cuadong2010.files.wordpress.com/2013/05/dsc07333.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+.product-title {
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin-bottom: 40px;
+}
