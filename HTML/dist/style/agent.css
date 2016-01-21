@@ -36,3 +36,38 @@
   letter-spacing: -1px;
   margin-bottom: 40px;
 }
+.ag-booking-history table {
+  background: white;
+  border-bottom: #777777 solid 1px;
+}
+.ag-booking-history thead {
+  background: #404040;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+.ag-booking-history-search-form {
+  margin-top: 20px;
+}
+.ag-pagination {
+  text-align: center;
+}
+.ag-form-title {
+  margin: 20px 0;
+  padding-bottom: 20px;
+  border-bottom: #eeeeee solid 1px;
+}
+.ag-payment-container {
+  margin-top: 40px;
+}
+.ag-foc-info {
+  float: left;
+  width: 100%;
+}
+.ag-foc-info label {
+  display: block;
+}
+.ag-foc-info input {
+  width: 100%;
+  margin-bottom: 20px;
+}
