@@ -144,30 +144,37 @@
                 <a data-toggle="collapse" href="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters" id="filters_col_bt" class="filter-columns-title-cont">Lọc kết quả <i class="icon icon-plus-1 pull-right"></i></a>
               </div>
               <div class="filter-container" id="collapseFilters">
+                <!-- Destination Select -->
                 <div class="filter filter-box">
                   <div class="filter-box-title">
-                    <h5>Bộ sưu tập</h5>
+                    <h4>Điểm đến</h4>
                   </div>
                   <div class="filter-box-cont-wrp">
-                    <ul class="filters-list filters-list-l1">
-                      <li class="filters-list-item">
-                        <a class="filter-list-item-link filter-list-item-link-empty " href="#">Top 10 hoạt động không thể bỏ lỡ</a>
-                      </li>
-                      <li class="filters-list-item">
-                        <a class="filter-list-item-link filter-list-item-link-empty" href="#">Dành cho gia đình</a>
-                      </li>
-                      <li class="filters-list-item">
-                        <a class="filter-list-item-link filter-list-item-link-empty" href="#">Thân thiện với trẻ em</a>
-                      </li>
-                      <li class="filters-list-item">
-                        <a class="filter-list-item-link filter-list-item-link-empty" href="#">...</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                    <div class="filter-country-select">
+                      <label>Quốc gia</label>
+                      <select class="form-control">
+                        <option>Thái Lan</option>
+                        <option>Singapore</option>
+                        <option>Hồng Kông</option>
+                        <option>Việt Nam</option>
+                      </select>
+                    </div>
+                    <div class="filter-city-select">
+                      <label>Thành phố/Khu vực</label>
+                      <select class="form-control">
+                        <option>Bangkok</option>
+                        <option>Pattaya</option>
+                        <option>Chiengmai</option>
+                        <option>Phuket</option>
+                        <option>Krabi</option>
+                      </select>
+                    </div>
+                  </div>  
+                </div><!-- /Destination Select -->
+                <!-- Category Filter -->
                 <div class="filter filter-box">
                   <div class="filter-box-title">
-                    <h5>Hoạt động du lịch</h5>
+                    <h4>Hoạt động du lịch</h4>
                   </div>
                   <div class="filter-box-cont-wrp">
                     <ul class="filters-list filters-list-l1">
@@ -188,10 +195,33 @@
                       <li class="filters-list-item"><a class="filter-list-item-link filter-list-item-link-empty" href="#">Tour du lịch <small>(45)</small></a></li>
                     </ul>
                   </div>
-                </div>
+                </div><!-- /Category Filter -->
+                <!-- Collection Filter -->
                 <div class="filter filter-box">
                   <div class="filter-box-title">
-                    <h5>Điểm đến</h5>
+                    <h4>Bộ sưu tập</h4>
+                  </div>
+                  <div class="filter-box-cont-wrp">
+                    <ul class="filters-list filters-list-l1">
+                      <li class="filters-list-item">
+                        <a class="filter-list-item-link filter-list-item-link-empty " href="#">Top 10 hoạt động không thể bỏ lỡ</a>
+                      </li>
+                      <li class="filters-list-item">
+                        <a class="filter-list-item-link filter-list-item-link-empty" href="#">Dành cho gia đình</a>
+                      </li>
+                      <li class="filters-list-item">
+                        <a class="filter-list-item-link filter-list-item-link-empty" href="#">Thân thiện với trẻ em</a>
+                      </li>
+                      <li class="filters-list-item">
+                        <a class="filter-list-item-link filter-list-item-link-empty" href="#">...</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div><!-- /Collection Filter -->
+                <!-- Attraction Filter -->
+                <div class="filter filter-box">
+                  <div class="filter-box-title">
+                    <h4>Địa điểm tham quan</h4>
                   </div>
                   <div class="filter-box-cont-wrp">
                     <ul class="filters-list filters-list-l1">
@@ -204,10 +234,11 @@
                       </li>
                     </ul>
                   </div>
-                </div>
+                </div><!-- /Attraction Filter -->
+                <!-- Duration Filter -->
                 <div class="filter filter-box">
                   <div class="filter-box-title">
-                    <h5>Thời lượng</h5>
+                    <h4>Thời lượng</h4>
                   </div>
                   <div class="filter-box-cont-wrp">
                     <ul class="filters-list filters-list-l1">
@@ -237,7 +268,7 @@
                       </li>
                     </ul>
                   </div>
-                </div>
+                </div><!-- /Duration Filter -->
               </div>
             </div>
           </div>
