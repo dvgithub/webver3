@@ -2112,11 +2112,16 @@ img {
 .acc-activity-review-card {
 	border: @gray-lighter solid 1px;
 	margin-bottom: 20px;
+	background: white;
 }
 
 .acc-activity-review-wrp, .acc-activity-review-card {
 	display: inline-block;
-	width: 100%
+	width: 100%;
+}
+
+.acc-activity-review-card {
+	padding: 15px 0
 }
 
 .acc-activity-review-photo {
@@ -2137,6 +2142,50 @@ img {
 .acc-activity-review-cont-wrp {
 	border-left: @gray-lighter solid 1px;
 	padding-left: 20px;
+}
+
+.activty-review-input-cont { 
+	margin-bottom: 20px
+}
+
+/* Star Rating */
+.activity-review-rating-scale {
+	display: inline-block;
+	.rating { 
+	  border: none;
+	  float: left;
+	}
+
+	.rating > input { display: none; } 
+	.rating > label:before { 
+	  margin: 5px;
+	  font-size: 1.25em;
+	  font-family: "fontello";
+	  display: inline-block;
+	  content: '\e80b';
+	}
+
+	.rating > .half:before { 
+	  content: '\e80d';
+	  position: absolute;
+	}
+
+	.rating > label { 
+	  color: #ddd; 
+	 float: right; 
+	 font-size: @font-size-h1
+	}
+
+	/***** CSS Magic to Highlight Stars on Hover *****/
+
+	.rating > input:checked ~ label, /* show gold star when clicked */
+	.rating:not(:checked) > label:hover, /* hover current star */
+	.rating:not(:checked) > label:hover ~ label { color: @brand-color;  } /* hover previous stars in list */
+
+	.rating > input:checked + label:hover, /* hover current star when changing rating */
+	.rating > input:checked ~ label:hover,
+	.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+	.rating > input:checked ~ label:hover ~ label { color: lighten(@brand-color, 20%) } 
 }
 
 /**************** FOOTER****************
