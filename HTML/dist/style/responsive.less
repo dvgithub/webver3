@@ -1,7 +1,18 @@
 @media screen and (max-width: 859px) {
+	.location-banner-container {
+		display: none;
+	}
+	.location-banner-container-xs {
+ 	display: block;
+ }
+}
+
+@media screen and (max-width: 480px) {
+
 	.product-feature-price-review {
 	    display: none;
 		}
+
 	.product-feature-price-review-sm {
 		display: block;
 		position: relative;
@@ -22,7 +33,33 @@
 		    	border-bottom: 5px dotted white;
 		    	bottom: -2px;
 		    }
-	}	
+	}		
+
+	.product-feature-price-review-placement {
+		display: none;
+	}
+
+	.product-feature-price-review-content {
+		min-width: 250px;
+		right: 0
+	}
+
+	.product-booking {
+		label, .form-control  {
+			width: 100%;
+		}
+		.btn {
+			width: 100%;
+		}
+	}
+
+	.dest-ld-city-banner{
+
+	    .dest-ld-city-banner-title {
+	    	font-size: 36px;
+	    }
+	}
+
 }
 
 .offers {

@@ -3,7 +3,7 @@
 /**************** GENERAL ****************
 *****************************************/
 body {
-  background: #f9f9f9;
+  background: #f5f5f5;
   -webkit-font-smoothing: antialiased;
   line-height: 1.6;
   color: #404040;
@@ -88,6 +88,7 @@ img {
 .btn {
   font-weight: bold;
   text-transform: uppercase;
+  white-space: normal;
 }
 /* ICON */
 .icon {
@@ -484,19 +485,24 @@ img {
   color: #555555;
   font-size: 14px;
   font-weight: normal;
-  width: 20%;
+  width: 48%;
   display: inline-block;
   vertical-align: top;
   padding-left: 5px;
   padding-top: 8px;
   text-align: left;
   margin-left: 0;
+  white-space: normal;
+  line-height: 22px;
 }
 .key-details .key-details-item .info {
   display: inline-block;
   vertical-align: top;
   padding-top: 8px;
   float: right;
+  width: 40%;
+  white-space: inherit;
+  text-align: right;
 }
 .key-details .tour-duration:before,
 .key-details .min-traveller:before,
@@ -553,8 +559,13 @@ img {
 .product-booking .offers {
   padding: 20px;
 }
+.product-booking .offers-form {
+  background-color: #d8d6d4;
+}
 .product-booking .box {
-  border-bottom: #eeeeee solid 1px;
+  border-bottom: #e2e2e2 solid 1px;
+  -webkit-box-shadow: 0 0.0625em 0.1875em rgba(0, 0, 0, 0.12), 0 0.0625em 0.125em rgba(0, 0, 0, 0.24);
+  box-shadow: 0 0.0625em 0.1875em rgba(0, 0, 0, 0.12), 0 0.0625em 0.125em rgba(0, 0, 0, 0.24);
 }
 .product-booking .box-title {
   margin-bottom: 15px;
@@ -839,6 +850,49 @@ img {
 }
 .promote-content-page-attraction .product-card-cont-container .product-card-short-desc {
   max-width: none;
+}
+/* Sticky Nav */
+.sticky-nav {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  display: none;
+}
+.sticky-nav-header {
+  background: #404040;
+  padding: 10px 0;
+}
+.sticky-nav-header .product-title {
+  color: white;
+  font-size: 24px;
+  margin: 0;
+}
+.sticky-nav-header .sticky-btn {
+  text-align: right;
+}
+.sticky-nav-link {
+  background: #eeeeee;
+}
+.sticky-nav-link-list {
+  list-style-type: none;
+  padding: 10px 0;
+  margin-bottom: 0;
+}
+.sticky-nav-link-list li {
+  display: inline-block;
+}
+.sticky-nav-link-list a {
+  padding-right: 15px;
+}
+.sticky-nav-link-list a:hover {
+  text-decoration: none;
 }
 /**************** SEARCH RESULT PAGE ****************
 ****************************************************/
@@ -1512,8 +1566,61 @@ img {
 .engage-box li:last-child {
   border-bottom: none;
 }
-.location-banner-container {
+.dest-ld-city-banner {
+  display: block;
+  height: 235px;
+  margin: 80px 0 40px 0;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  background-color: #ecede8;
+  padding: 0 15px;
+}
+.dest-ld-city-banner:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+.dest-ld-city-banner:hover .parent-link:hover {
+  background-size: 110%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.dest-ld-city-banner .parent-link {
+  height: 100%;
+  width: 100%;
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  text-align: center;
+}
+.dest-ld-city-banner .dest-ld-city-banner-title {
+  font-size: 48px;
+  line-height: 110%;
   margin-bottom: 20px;
+  padding-top: 60px;
+  color: white;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.35);
+}
+.dest-ld-city-banner .dest-ld-city-banner-cta {
+  margin-top: 10px;
+}
+.location-banner-container,
+.location-banner-container-xs {
+  margin-bottom: 20px;
+}
+.location-banner-container-xs {
+  display: none;
 }
 .location-banner {
   background-size: cover;
@@ -1874,11 +1981,17 @@ img {
     font-size: 36px;
   }
 }
+.intro-header-home .text-center {
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25), 0 4px 15px rgba(0, 0, 0, 0.63);
+}
 .intro-header-home .intro-search-box {
   width: 50%;
-  min-width: 350px;
+  min-width: 250px;
   margin: 0 auto;
   height: 50px;
+  text-align: center;
 }
 .destination-search {
   position: relative;
@@ -1896,6 +2009,46 @@ img {
   margin: 0;
   background: white;
   width: 100%;
+}
+.destination-choosing {
+  text-align: left;
+}
+.destination-choosing .modal-header {
+  border-bottom: none;
+}
+.destination-display-row {
+  margin-bottom: 10px;
+}
+.destination-display-country {
+  float: left;
+  min-width: 70px;
+  color: #fe5815;
+  text-align: right;
+  font-weight: bold;
+}
+.destination-display-city-wrap {
+  padding-left: 80px;
+}
+.destination-display-city-wrap a {
+  color: #777777;
+  text-transform: uppercase;
+}
+.destination-display-city-wrap a:hover {
+  color: #fe5815;
+  text-decoration: none;
+}
+.destination-display-city-wrap span {
+  color: #777777;
+  padding: 0 5px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.destination-display-city-wrap span:after {
+  content: "|";
+  padding-left: 10px;
+}
+.destination-display-city-wrap span:last-child:after {
+  content: "";
 }
 .feature-post-list {
   margin-top: 15px;
@@ -2152,6 +2305,14 @@ img {
   padding: 30px 0;
 }
 @media screen and (max-width: 859px) {
+  .location-banner-container {
+    display: none;
+  }
+  .location-banner-container-xs {
+    display: block;
+  }
+}
+@media screen and (max-width: 480px) {
   .product-feature-price-review {
     display: none;
   }
@@ -2173,6 +2334,23 @@ img {
   .product-feature-price-review-sm .bottom {
     border-bottom: 5px dotted white;
     bottom: -2px;
+  }
+  .product-feature-price-review-placement {
+    display: none;
+  }
+  .product-feature-price-review-content {
+    min-width: 250px;
+    right: 0;
+  }
+  .product-booking label,
+  .product-booking .form-control {
+    width: 100%;
+  }
+  .product-booking .btn {
+    width: 100%;
+  }
+  .dest-ld-city-banner .dest-ld-city-banner-title {
+    font-size: 36px;
   }
 }
 @media screen and (max-width: 767px) {
