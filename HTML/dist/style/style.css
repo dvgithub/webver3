@@ -2048,7 +2048,7 @@ img {
   padding-left: 10px;
 }
 .destination-display-city-wrap span:last-child:after {
-  content: "";
+  content: none;
 }
 .feature-post-list {
   margin-top: 15px;
