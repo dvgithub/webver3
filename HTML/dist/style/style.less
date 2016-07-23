@@ -19,7 +19,8 @@ section {
 
 h1, h2, h3, h4, h5, h6 { 
 	color: @gray-darker;
-	font-weight: 500
+	font-weight: 500;
+	line-height: 125%;
 }
 
 h1 {letter-spacing: -1.5px; font-weight: 700}
@@ -81,6 +82,22 @@ img {
 	    content: asdfasdf;
 	    position: absolute;
     }
+}
+
+select {
+-webkit-appearance: none;
+-webkit-border-radius:0; 
+border-radius:0; 
+}
+
+.form-select.icon.icon-down-open,  .icon-down-dir {
+	&:before {
+		position: absolute;
+		top:13px;
+		right: 5px;
+		color: lighten(@gray-light, 20%)
+	}
+	
 }
 
 .btn {
@@ -171,7 +188,7 @@ img {
     padding: 0;
     margin: 20px 0 10px 0;
     list-style: none;
-    background-color: #f9f9f9;
+    background-color: none;
    	border-radius: 0;
 }   	
 
@@ -667,6 +684,10 @@ img {
 
 .offer-types {
 
+	.row {
+		padding-right: 15px;
+	}
+
 	.select {
 		margin-right: 5px
 	}
@@ -679,16 +700,27 @@ img {
 
 	.label {
 		font-weight: bold;
-		color: @gray
+		color: @gray;
+		display:inline-block;
+		margin-bottom: 7px;
 	}
 
 	select {
 		font-weight: normal;
 	}
+
+	label {
+		width: 100%;
+	}
+
+	.offer-simple-product {
+		padding-right: 0;
+		margin-bottom: 20px;
+	}
 }
 
 .book-offer-wrp {
-	padding-top: 12px;
+	padding-top: 3px;
 	text-align: right;
 
 	.price-total, .price-promise {
@@ -1322,6 +1354,7 @@ img {
 	z-index: 3
 }
 
+
 .checkout-process {
     text-align: center;
     float: none;
@@ -1369,11 +1402,11 @@ img {
 /* Cart */
 
 .cart-status, .customer-info-wrp, .review-cart-wrp, .payment-method-wrp { margin-bottom: 20px;}
-.cart-item, .cart-total {
-	border-top: darken(@gray-lighter, 10%) solid 1px;
-	padding: 20px 0;
-}
+
 .cart-item {
+	background: white;
+	padding: 20px;
+	margin-bottom: 20px;
 	.header {
 		display: inline-block;
 		width: 100%;
@@ -1412,7 +1445,7 @@ img {
 	.details {
 		float: left;
 		width: 75%;
-		padding: 0 20px
+		padding-left: 20px
 	}
 	.details-list {
 		margin: 0;
@@ -1421,10 +1454,24 @@ img {
 	.details-list-row {
 		list-style-type: none;
 	}
+	.detail-product-header {
+		display: inline-block;	
+	}
+	.detail-product-name {
+		font-weight: bold;
+	}
+	
+	.details-price-cart-control {
+		position: relative;
+	}
+	.details-price {
+		padding-right: 50px;
+	}
 	.cart-control {
 		position: absolute;
-		bottom: 0;
-		right: 0;
+		top:0;
+		right:0;
+		width: 50px;
 	}
 	.remove-product {
 		color: darken(@gray-lighter, 30%);
@@ -1438,7 +1485,7 @@ img {
 	}
 }
 .cart-total {
-	margin-bottom: 20px; 
+	margin-bottom: 40px; 
 	.price-tag, .guarantee {
 		text-align: right;
 	}
@@ -1456,7 +1503,8 @@ img {
 	}
 }
 .review-checkout {
-	padding: 20px
+	border-top: @brand-color solid 3px;
+	padding: 20px;
 }
 .checkout-box-wrp {
 	.title {
@@ -1475,6 +1523,7 @@ img {
 }
 
 /* Customer Info */
+
 .customer-info-step {
 	margin-bottom: 40px;
 	h2.title {
@@ -1498,13 +1547,11 @@ img {
 	  	padding-top: 5px;
 	  	font-weight: bold
 	}
-	.cart-item, .customer-info-input-group, .payment-select-wrp {
-		margin-left: 40px;
-	}
+
 	.cart-item-content {
 		.img-wrp {
 			width: 15%;
-			min-width: 75px;
+			min-width: 60px;
 		}
 	}
 	label {font-weight: normal;}
@@ -1563,6 +1610,12 @@ img {
 		}
 	}
 }
+
+.booking-finished {
+	text-align: right;
+	margin-bottom: 20px;
+}
+
 .redeem-code-wrp {
 	.form-group {margin-bottom: 0}
 	a {
@@ -1578,17 +1631,20 @@ img {
 }
 .newsletter-agree {
 	font-size: @font-size-small;
-	padding: 10px 15px;
+	padding: 20px 0;
+	margin-bottom: 20px;
 	input {
 		float: left;
 		padding-left: 20px
 	}
 	.newsletter-agree-cont {
 		margin-left: 25px;
-		width: 100%;
 	}
 }
 
+.agreement {
+	text-align: center;
+}
 /**************** Sub Columns ****************
 *********************************************/
 
