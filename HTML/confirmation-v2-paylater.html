@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+
+    <title>Confirmation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="../dist/style/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../fonts/fontello/css/fontello.css">
+    <!--<link rel="stylesheet" href="../fonts/fontello/css/icon_set_1.css">-->
+    <link href="../dist/style/date_time_picker.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <header class="dv-page-header">
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default navbar-static-top dv-nav-bar">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo" href="#"><img src="http://divui.com/Content/images/logo.png"></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle navbar-pick-place" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Chọn điểm đến <span class="caret"></span></a>
+                <ul class="dropdown-menu dv-dropdown-menu">
+                  <div class="col-md-4">
+                    <li class="dv-dropdown-header">Thái Lan</li>
+                    <li><a href="#">Bangkok</a></li>
+                    <li><a href="#">Pattaya</a></li>
+                    <li><a href="#">Chiengmai</a></li>
+                    <li><a href="#">Phuket</a></li>
+                    <li><a href="#">Krabi</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dv-dropdown-header">Singapore</li>
+                    <li><a href="#">Singapore</a></li>
+                  </div>
+                  <div class="col-md-4">
+                    <li class="dv-dropdown-header">Việt Nam</li>
+                    <li><a href="#">Tp. Hồ Chí Minh</a></li>
+                    <li><a href="#">Đà Nẵng</a></li>
+                    <li><a href="#">Huế</a></li>
+                    <li><a href="#">Hội An</a></li>
+                    <li><a href="#">Nha Trang</a></li>
+                    <li><a href="#">Phú Quốc</a></li>
+                    <li><a href="#">Đà Lạt</a></li>
+                  </div>
+                  <div class="col-md-4">
+                    <li class="dv-dropdown-header">Hongkong</li>
+                    <li><a href="#">Hongkong <span class="label-bs label-warning">MỚI!</span></a></li>
+                    <li role="separator" class="divider"></li></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="country.html">Country</a></li>
+                    <li><a href="city.html">City </a></li>
+                    <li><a href="attraction.html">Attraction</a></li>
+                    <li><a href="collection.html">Collection </a></li>
+                    <li><a href="search-result.html">Search-Result </a></li>
+                    <li><a href="detail.html">Details</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="cart-info.html">Payment</a></li>
+                  </div> 
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a href="#">
+                  <i class="icon icon-cart"></i>Giỏ hàng
+                  <span class="navbar-cart-ammount">6</span>
+                </a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="icon icon-question"></i>Hỗ trợ <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#"><i class="icon icon-phone"></i>Hotline: <strong>0908 1080 98</strong></a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#"><i class="icon  icon-info-circled-2"></i>Câu hỏi thường gặp</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#"><i class="icon icon-email"></i>Liên hệ</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><i class="icon icon-user-6"></i>Đăng nhập/Đăng ký</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </header>
+
+    <Main>
+      <div class="container confirmation-page">
+        <div class="order-status-wrp order-status-wrp--paynow">
+          <div class="row">
+            <div class="col-md-9">
+              <div class="order-status">
+                <div class="order-status-cont">
+                  <div class="order-status-title">
+                    <h1 style="font-weight:bold">Đặt vé hoàn tất!</h1>
+                    <span>Cảm ơn bạn đã sử dụng dịch vụ của divui.com</span>
+                  </div>
+                  <div class="order-status-desc">
+                    <div class="order-id">
+                      <span>Mã đơn hàng của bạn là <strong>45345</strong></span>
+                    </div>
+                    <div class="order-payment-remind">
+                      <span>Đây là đơn hàng chưa được thanh toán, vui lòng thực hiện thanh toán cho đơn hàng này trước <strong>19:00 ngày 30/03/2016</strong>. Quá thời hạn trên, đơn hàng sẽ tự động hủy</span>
+                    </div>
+                    <div class="email-received-duration">
+                      <span>Voucher/Vé và hướng dẫn sử dụng dịch vụ sẽ được gửi đến địa chỉ <strong>denisvu@gmail.com</strong>trong vòng 24h kể từ thời điểm ĐIVUI nhận được thanh toán</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="payment-method-info">
+                <div class="confirmation-payment-method">
+                  <h2>Thông tin thanh toán</h2>
+                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingBankTransfer">
+                        <h4 class="panel-title">
+                          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsedBankTransfer" aria-expanded="true" aria-controls="collapsedBankTransfer">
+                            Chuyển khoản ngân hàng <br>
+                          </a>
+                        </h4>
+                        <span class="payment-fee-description">Miễn phí thanh toán</span>
+                      </div>
+                      <div id="collapsedBankTransfer" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingBankTransfer">
+                        <div class="panel-body">
+                         <p>Vui lòng chuyển tổng số tiền cần thanh toán vào 1 trong các tài khoản ngân hàng của ĐIVUI như bên dưới, Voucher/Vé sử dụng dịch vụ sẽ được gửi vào email mà bạn cung cấp trong vòng 24h kể từ thời điểm ĐIVUI nhận được thanh toán.
+                          </p>
+                          <div class="payment-note alert alert-warning">
+                            <ul>
+                              <li>Vui lòng ghi rõ nội dung thanh toán: <strong>1235 TRAN HOANG VU</strong></li>
+                              <li>Tổng số tiền thanh toán: <strong>3.456.000đ</strong></li>
+                            </ul>
+                          </div>
+                          <div class="banking-list">
+                            <h5>Danh sách ngân hàng</h5>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="bank-display-box">
+                                  <div class="bank-logo">
+                                    <img src="http://divui.com/content/images/banks/LOGO-VCB-100x50.jpg">
+                                  </div>
+                                  <div class="bank-info">
+                                    <ul>
+                                      <li class="bank-name">VIETCOMBANK</li>
+                                      <li>Số tài khoản: 0371003698721 </li>
+                                      <li>Chi nhánh: TÂN ĐỊNH</li>
+                                      <li>Chủ tài khoản: TRAN HOANG VU</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="bank-display-box">
+                                  <div class="bank-logo">
+                                    <img src="http://divui.com/content/images/banks/LOGO-TCB-100x50.jpg">
+                                  </div>
+                                  <div class="bank-info">
+                                    <ul>
+                                      <li class="bank-name">TECHCOMBANK</li>
+                                      <li>Số tài khoản: 19020580802011</li>
+                                      <li>Chi nhánh: QUANG TRUNG</li>
+                                      <li>Chủ tài khoản: TRAN HOANG VU</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="bank-display-box">
+                                  <div class="bank-logo">
+                                    <img src="http://divui.com/content/images/banks/LOGO-SACOM-100x50.jpg">
+                                  </div>
+                                  <div class="bank-info">
+                                    <ul>
+                                      <li class="bank-name">SACOMBANK</li>
+                                      <li>Số tài khoản: 060094223361 </li>
+                                      <li>Chi nhánh: GÒ VẤP</li>
+                                      <li>Chủ tài khoản: TRAN HOANG VU</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="bank-display-box">
+                                  <div class="bank-logo">
+                                    <img src="http://divui.com/content/images/banks/LOGO-MARI-100x50.jpg">
+                                  </div>
+                                  <div class="bank-info">
+                                    <ul>
+                                      <li class="bank-name">MARITIME BANK</li>
+                                      <li>Số tài khoản: 04401014969222</li>
+                                      <li>Chi nhánh: QUANG TRUNG</li>
+                                      <li>Chủ tài khoản: TRAN HOANG VU</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="bank-display-box">
+                                  <div class="bank-logo">
+                                    <img src="http://divui.com/content/images/banks/LOGO-TP-100x50.jpg">
+                                  </div>
+                                  <div class="bank-info">
+                                    <ul>
+                                      <li class="bank-name">TP BANK</li>
+                                      <li>Số tài khoản: 00488782001 </li>
+                                      <li>Chi nhánh: QUANG TRUNG</li>
+                                      <li>Chủ tài khoản: TRAN HOANG VU</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="bank-display-box">
+                                  <div class="bank-logo">
+                                    <img src="http://divui.com/Content/Images/Banks/acblogo.jpg">
+                                  </div>
+                                  <div class="bank-info">
+                                    <ul>
+                                      <li class="bank-name">ACB</li>
+                                      <li>Số tài khoản: 190160369 </li>
+                                      <li>Chi nhánh: QUANG TRUNG</li>
+                                      <li>Chủ tài khoản: TRAN HOANG VU</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingCashDirect">
+                        <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseCashDirect" aria-expanded="false" aria-controls="collapseCashDirect">
+                            Trực tiếp tại văn phòng ĐIVUI
+                          </a>
+                        </h4>
+                        <span class="payment-fee-description">Miễn phí thanh toán</span>
+                      </div>
+                      <div id="collapseCashDirect" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingCashDirect">
+                        <div class="panel-body">
+                          <p>Bạn có thể đến thanh toán trực tiếp tại Văn phòng ĐIVUI</p>
+                          <ul>
+                            <li>Địa chỉ: 132/97 Nguyễn Hữu Cảnh, P.22, Q. Bình Thạnh</li>
+                            <li>Thứ hai - Thứ sáu: 7:00 - 19:00</li>
+                            <li>Thứ bảy - Chủ nhật: 7:00 - 17:00</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingCreditCard">
+                        <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseCreditCard" aria-expanded="false" aria-controls="collapseCreditCard">
+                            Thẻ tín dụng (Credit Card)
+                          </a>
+                        </h4>
+                        <span class="payment-fee-description">Áp dụng phí xử lý thanh toán</span>
+                      </div>
+                      <div id="collapseCreditCard" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingCreditCard">
+                        <div class="panel-body">
+                          <p>Thanh toán bằng thẻ tín dụng Visa/Master/JCB</p>
+                          <p>Bạn sẽ được chuyển tiếp đến cổng thanh toán OnePay để thực hiện thanh toán này. Tất cả giao dịch đều được đảm bảo tuyệt đối an toàn.</p>
+                          <div class="payment-note alert alert-warning">
+                            <ul>
+                              <li><a href="#">Phí xử lý thanh toán:</a> <strong>345.000đ</strong></li>
+                              <li>Tổng số tiền thanh toán: <strong>3.456.000đ</strong></li>
+                            </ul>
+                          </div>
+                          <button class="btn btn-warning btn-large">Thực hiện thanh toán bằng thẻ tín dụng</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingiBanking">
+                        <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseiBanking" aria-expanded="false" aria-controls="collapseiBanking">
+                            Thẻ nội địa/ Ngân hàng điện tử
+                          </a>
+                        </h4>
+                        <span class="payment-fee-description">Áp dụng phí xử lý thanh toán</span>
+                      </div>
+                      <div id="collapseiBanking" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingiBanking">
+                        <div class="panel-body">
+                          <p>Thanh toán bằng Thẻ nội địa/Ngân hàng điện tử</p>
+                          <p>Bạn sẽ được chuyển tiếp đến cổng thanh toán OnePay để thực hiện thanh toán này. Tất cả giao dịch đều được đảm bảo tuyệt đối an toàn.</p>
+                          <div class="payment-note alert alert-warning">
+                            <ul>
+                              <li><a href="#">Phí xử lý thanh toán:</a> <strong>345.000đ</strong></li>
+                              <li>Tổng số tiền thanh toán: <strong>3.456.000đ</strong></li>
+                            </ul>
+                          </div>
+                          <button class="btn btn-warning btn-large">Thực hiện thanh toán bằng thẻ tín dụng</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="confirmation-order-detail">
+                <h2>Kiểm tra lại đặt vé của bạn</h2>
+                <div class="box-padding-20 confirmation-order-detail-list">
+                   <div class="cart-item">
+                      <div class="cart-item-content">
+                        <div class="img-wrp">
+                          <a href="#">
+                            <img src="//cdn2.getyourguide.com/img/tour_img-330494-89.jpg">
+                          </a>
+                        </div>
+                        <div class="details">
+                          <ul class="details-list">
+                            <li class="details-list-row detail-product-name"><a href="#">New York: One World Observatory Entrance Ticket</a></li>
+                            <li class="details-list-row">Loại Ve tham quan</li>
+                            <li class="details-list-row">01/02/2015</li>
+                            <li class="details-list-row">3 Người lớn, 2 Trẻ em, 1 Người cao tuổi</li>
+                          </ul>
+                          <div class="details-price-cart-control">
+                            <div class="details-price">Tổng tạm: 33.000.000d</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart-item">
+                      <div class="cart-item-content">
+                        <div class="img-wrp">
+                          <a href="#">
+                            <img src="//cdn2.getyourguide.com/img/tour_img-330494-89.jpg">
+                          </a>
+                        </div>
+                        <div class="details">
+                          <ul class="details-list">
+                            <li class="details-list-row detail-product-name"><a href="#">New York: One World Observatory Entrance Ticket</a></li>
+                            <li class="details-list-row">Loại Ve tham quan</li>
+                            <li class="details-list-row">01/02/2015</li>
+                            <li class="details-list-row">3 Người lớn, 2 Trẻ em, 1 Người cao tuổi</li>
+                          </ul>
+                          <div class="details-price-cart-control">
+                            <div class="details-price">Tổng tạm: 33.000.000d</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="total-price-wrp">
+                      <table>
+                        <tr>
+                          <td>Tổng tạm</td>
+                          <td>1.000.000d</td>
+                        </tr>
+                        <tr>
+                          <td>Giảm giá</td>
+                          <td>0d</td>
+                        </tr>
+                        <tr>
+                          <td>Tổng cộng</td>
+                          <td>
+                            <span class="total-price">1.000.000d</span>
+                            <span class="tax-include">Giá đã bao gồm 10% thuế VAT</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                </div>
+              </div>
+              <div class="customer-info-review">
+                <h2>Thông tin hành khách</h2>
+                <div class="box-padding-20 confirmation-customer-info">
+                  <table>
+                    <tr>
+                      <td>Ho Va Ten</td>
+                      <td>TRAN HOANG VU DAI NHAN DAY NE</td>
+                    </tr>
+                    <tr>
+                      <td>Dien thoai</td>
+                      <td>909808098098</td>
+                    </tr>
+                    <tr>
+                      <td>Email</td>
+                      <td>daylacaiemailsieudai@ daylacaiemailsieudai.com</td>
+                    </tr>
+                    <tr>
+                      <td>Thanh pho</td>
+                      <td>Ho Chi Minh</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="sidebar-customer-support">
+                
+                <div class="box-padding-20">
+                  <h3>Ban can ho tro?</h3>
+                  Lien he divui ngay
+                </div>  
+              </div>
+            </div>
+          </div> 
+        </div>
+    </Main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row footer-content-pri">
+          <div class="col-md-4">
+            <h2>DI VUI </h2>
+            <p>Viator is the world's leading resource for researching, finding and booking the best travel experiences worldwide.
+Viator joined the TripAdvisor family in 2014</p>  
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-xs-6">
+                <h4 class="box-link-title">
+                  VỀ ĐI VUI
+                </h4>
+                <ul class="box-link-list">
+                  <li><a href="#">Về ĐI VUI</a></li>
+                  <li><a href="#">Tuyển dụng</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Chính sách bảo mật</a></li>
+                  <li><a href="#">Điều khoản sử dụng</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-6">
+                <h4 class="box-link-title">
+                  HỢP TÁC VỚI ĐI VUI
+                </h4>
+                <ul class="box-link-list">
+                  <li><a href="#">Trở thành đối tác của ĐI VUI</a></li>
+                  <li><a href="#">Chương trình đối tác phân phối (Affiliate)</a></li>
+                  <li><a href="#">Đối tác đăng nhập</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h4 class="box-link-title">
+              LIÊN HỆ
+            </h4>
+            <ul class="box-link-list">
+              <li>HOTLINE: 0908 1080 98 (Viber/Zalo)</li>
+              <li>hotro@divui.com</li>
+              <li>Văn phòng đại diện: 132/97 Nguyễn Hữu Cảnh, P.22, Q. Bình Thạnh, Tp.HCM</li>
+              <li>Thứ 2 - 6: 9:00 - 18:00</li>
+            </ul>  
+          </div>    
+        </div>
+        <div class="row footer-content-sec"></div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- Date and time pickers -->
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script>
+    $('input.date-pick').datepicker('setDate', 'today');
+    </script>
+  </body>
+</html>

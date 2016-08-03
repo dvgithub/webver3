@@ -1,19 +1,26 @@
 $(document).ready(function(){
-  $('#navigation a, #fixedbar a').on('click', function(e) {
+  $('.sticky-nav a, .product-feature-booking a').on('click', function(e) {
     e.preventDefault();
+	
+	$('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top - 120
+    }, 500);
+	
   });
   
-  $(window).on('scroll',function() {
-    var scrolltop = $(this).scrollTop();
-    var topOfDiv = $('#navigation').position().top;
-    var bottomOfDiv = $('#navigation').position().top+$('#navigation').outerHeight(true);
-
-    if(scrolltop >= bottomOfDiv) {
-      $('#fixedbar').fadeIn(250);
+  $(window).on('scroll',function() {	  
+	var scrolltop = $(this).scrollTop(); 
+    var toggleposition = $('.dv-page-header').position().top
+					+$('.dv-page-header').outerHeight(true)
+					+$('.product-header').outerHeight(true)
+					+$('.breadcrumb').outerHeight(true);
+	
+    if(scrolltop >= toggleposition) {
+      $('.sticky-nav').fadeIn(250);
     }
     
-    else if(scrolltop <= topOfDiv) {
-      $('#fixedbar').fadeOut(250);
+    else if(scrolltop <= toggleposition) {
+      $('.sticky-nav').fadeOut(250);
     }
   });
 });

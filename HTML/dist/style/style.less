@@ -7,7 +7,7 @@
 *****************************************/
 
 body {
-	background: #f5f5f5;
+	background: #e6e6e6; /**#f5f5f5;**/
 	-webkit-font-smoothing: antialiased;
 	line-height: 1.6;
 	color: @gray-dark
@@ -686,6 +686,7 @@ border-radius:0;
 
 	.row {
 		padding-right: 15px;
+		padding-left: 10px;
 	}
 
 	.select {
@@ -715,6 +716,7 @@ border-radius:0;
 
 	.offer-simple-product {
 		padding-right: 0;
+		padding-left: 5px;
 		margin-bottom: 20px;
 	}
 }
@@ -889,6 +891,7 @@ border-radius:0;
     	z-index: 10;
     	display: inline-block;
     	min-height: 150px;
+    	width: 100%;
     }
 
     .product-card-header {
@@ -1028,9 +1031,9 @@ border-radius:0;
 	.search-header-filter-title-wrp, .search-header-filter-display-wrp {
 		float: left;
 	}
+}
 
-	.search-header-filter-display-wrp {
-		.search-header-filter-pills {
+.search-header-filter-pills, .global-tag {
 			background: white;
 			color: @gray;
 			font-size: @font-size-base;
@@ -1044,9 +1047,6 @@ border-radius:0;
 				i {color: @gray-darker}
 			}
 		}
-
-	}
-}
 
 .search-header-filter.is-true {display: inline-block;}
 .search-header-filter.is-hide {display: none;}
@@ -1399,6 +1399,13 @@ border-radius:0;
 	}
 }
 
+.checkout-process--confirm {
+	.label {
+		min-width: 0;
+		left:400%
+	}
+}
+
 /* Cart */
 
 .cart-status, .customer-info-wrp, .review-cart-wrp, .payment-method-wrp { margin-bottom: 20px;}
@@ -1617,7 +1624,11 @@ border-radius:0;
 }
 
 .redeem-code-wrp {
-	.form-group {margin-bottom: 0}
+	padding: 10px 0;
+	border-top: darken(@gray-lighter, 10%) solid 1px;
+	border-bottom: darken(@gray-lighter, 10%) solid 1px;
+
+	.form-group {margin-bottom: 20px}
 	a {
 		display: block;
 		margin-bottom: 10px;
@@ -2075,7 +2086,193 @@ border-radius:0;
 	margin: 0 5px 10px 0
 }
 
+.box-padding-20 {
+	background: white;
+	padding: 20px;
+}
 
+.confirmation-order-detail {
+	margin-bottom: 40px;
+}
+
+.order-status-title, .customer-info-review, .payment-method-info {
+	margin-bottom: 20px;
+
+	h1 {
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+}
+
+.order-status-desc {
+	font-size: @font-size-h4;
+
+	.order-id, .order-payment-confirm, .email-received-duration, .helpful-tips, .order-payment-remind {
+		span {
+	    	display: block;
+	    	padding-left: 30px;
+	    	margin-bottom: 10px;
+	    }
+		&:before {
+		font-family: "fontello";
+	    font-style: normal;
+	    font-weight: normal;
+	    font-size: @font-size-h3;
+	    speak: none;
+	    text-decoration: inherit;
+	    line-height: 1.2;
+	    text-align: center;
+	    float: left;
+	    vertical-align: top;
+	    color: @brand-success;
+	    content: '\e81a';
+	    text-align: center;
+		}
+	}
+	.order-payment-remind {
+		&:before {
+			content: '\e82d';
+			color: @brand-warning
+		}
+		
+	}	
+}
+
+.confirmation-order-detail-list {
+	
+	.cart-item {
+		padding: 0;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom: darken(@gray-lighter, 10%) solid 1px;
+	}
+	.details-price {
+		padding: 0;
+		text-align:right
+	}
+}
+
+.total-price-wrp, {
+	table {
+		width: 100%;
+		tr {
+			display: block;
+			margin-bottom: 10px;			
+			padding-bottom: 10px;
+			border-bottom: darken(@gray-lighter, 10%) solid 1px;
+		}
+		tr:last-child {
+			border-bottom: none;
+		}
+		td {
+			display: inline-block;
+		}
+		tr td:first-child {
+			width: 50%;
+			float: left;
+			font-weight: bold
+		}
+		tr td:nth-child(2) {
+			width: 50%;
+			padding-left: 20px;
+			text-align: right;
+		}
+		.total-price {
+			font-weight: bold;
+			font-size: @font-size-h4;
+			display: block;
+		}
+		.tax-include {
+			font-style: italic;
+			font-size: @font-size-small;
+		}
+	}
+}
+
+.customer-info-review {
+	table {
+		width: 100%;
+		tr td {
+			vertical-align: top;
+		}
+		tr td:first-child {
+			width: 25%;
+			padding-bottom: 10px;
+			min-width: 100px;
+			font-weight: bold
+		}
+	}
+}
+
+.banking-list {
+	.bank-display-box {
+		float: left;
+		width: 100%;
+		padding: 15px;
+		border: @gray-lighter solid 1px;
+		margin-bottom: 20px;
+	}
+	.bank-logo {
+		width: 25%;
+		float: left;
+	}
+	.bank-info {
+		float: left;
+		width: 75%;
+		padding-left: 15px;
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+	}
+	.bank-name {
+		font-weight: bold;
+	}
+}
+
+.payment-fee-description {
+	font-size: @font-size-small;
+	font-style: italic;
+	color: @gray-light
+}
+
+.payment-note {
+	ul {
+		margin-left: 0;
+		padding-left: 0;
+		list-style-type: none;
+	}
+}
+
+.payment-method-info, .payment-method-select {
+	.panel-title {
+		a:hover, a:active, a:visited {
+			text-decoration: none;
+		}
+		a:before, a.collapse:before {
+			margin-right: 20px;
+			font-family: "fontello";
+		    font-style: normal;
+		    font-weight: normal;
+		    font-size: @font-size-h3;
+		    speak: none;
+		    text-decoration: inherit;
+		    line-height: 1.2;
+		    text-align: center;
+		    float: left;
+		    vertical-align: top;
+		    color: @brand-warning;
+		}
+
+		a:before {
+			content: '\e81b'
+		}
+		a.collapsed:before {
+			content: '\e904'
+		}
+	}
+}
 
 /**************** HOMEPAGE ****************
 **********************************************/

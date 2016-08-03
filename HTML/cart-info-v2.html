@@ -131,7 +131,7 @@
           </li>
         </ul>
         <div class="row">
-          <div class="col-md-8 customer-info-step">
+          <div class="col-md-9 customer-info-step">
             <div class="customer-info-wrp">
               <h2 class="title"><span class="step-count">1</span> Thông tin khách hàng</h2>
               <div class="row">
@@ -252,34 +252,116 @@
                 </div>
               </div>
             </div><!-- End Review Card -->
-            <div class="payment-method-wrp">
+            <div class="payment-method-select">
               <h2 class="title"><span class="step-count">3</span>Chọn phương thức thanh toán</h2>
               <div class="payment-select-wrp">
-                <div class="form-group">
-                  <label>
-                    <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
-                    <div class="payment-method-cont-wrp">
-                      <h4><i class="icon icon-town-hall"></i>Chuyển khoản ngân hàng</h4>
-                      <p>Danh sách các tài khoản ngân hàng của ĐI VUI sẽ được cung cấp tại trang kế tiếp và trong email xác nhận gửi về email mà bạn cung cấp sau khi đặt vé hoàn tất.</p>  
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Chuyển khoản ngân hàng <br>
+                        </a>
+                      </h4>
+                      <span class="payment-fee-description">Miễn phí thanh toán</span>
                     </div>
-                  </label>
-                </div>
-                <div class="form-group">
-                  <label>
-                    <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
-                    <div class="payment-method-cont-wrp">
-                      <h4><i class="icon icon-money"></i>Thanh toán bằng tiền mặt tại văn phòng ĐI VUI</h4>
-                      <p>Bạn có thể đến thanh toán đơn hàng của mình tại địa chỉ 132/97 Nguyễn Hữu Cảnh, P.22, Q. Bình Thạnh TP.HCM. Khi đến vui lòng cung cấp mã đơn hàng để việc thanh toán được chính xác.</p>  
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="panel-body">
+                       <p>
+                        Danh sách ngân hàng và hướng dẫn thanh toán sẽ được hiển thị sau khi đặt vé hoàn tất.
+                        </p>
+                      </div>
                     </div>
-                  </label>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFour">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Thanh toán tiền mặt trực tiếp tại văn phòng (Chỉ áp dụng cho khách hàng ở TP. HCM)
+                        </a>
+                      </h4>
+                      <span class="payment-fee-description">Miễn phí thanh toán</span>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                      <div class="panel-body">
+                        <p>Bạn vui lòng hoàn tất đặt vé để có Mã Đơn Hàng và sử dụng Mã Đơn Hàng này để đến thanh toán trực tiếp tại Văn phòng ĐIVUI tại địa chỉ 132/97 Nguyễn Hữu Cảnh, Phường 22, Q. Bình Thạnh, TP.HCM</p>
+                        <p>
+                          Thời gian làm việc của văn phòng ĐIVUI:
+                          <ul>
+                            <li>Thứ hai - Thứ sáu: 7:00 - 19:00</li>
+                            <li>Thứ bảy - Chủ nhật: 7:00 - 17:00</li>
+                          </ul>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Thẻ tín dụng (Credit Card)
+                        </a>
+                      </h4>
+                      <span class="payment-fee-description">Áp dụng phí xử lý thanh toán</span>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                      <div class="panel-body">
+                        <div class="payment-note">
+                          <ul>
+                            <li><a href="#">Phí xử lý thanh toán:</a> <strong>345.000đ</strong></li>
+                            <li>Tổng số tiền thanh toán: <strong>3.456.000đ</strong></li>
+                          </ul>
+                        </div>
+                        <p>Bạn sẽ được chuyển tiếp đến cổng thanh toán OnePay để thực hiện thanh toán này. Tất cả giao dịch đều được đảm bảo tuyệt đối an toàn.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Thẻ nội địa
+                        </a>
+                      </h4>
+                      <span class="payment-fee-description">Áp dụng phí xử lý thanh toán</span>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                      <div class="panel-body">
+                        <div class="payment-note">
+                          <ul>
+                            <li><a href="#">Phí xử lý thanh toán:</a> <strong>345.000đ</strong></li>
+                            <li>Tổng số tiền thanh toán: <strong>3.456.000đ</strong></li>
+                          </ul>
+                        </div>
+                        <p>Bạn sẽ được chuyển tiếp đến cổng thanh toán OnePay để thực hiện thanh toán này. Tất cả giao dịch đều được đảm bảo tuyệt đối an toàn.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="payment-method-total-price">
-                <h4>Tổng cộng</h4>
-                <span class="total-price-display">
-                  300.000VND
-                </span>
-              </div>
+              <div class="total-price-wrp">
+                    <table>
+                      <tr>
+                        <td>Tổng tạm</td>
+                        <td>1.000.000d</td>
+                      </tr>
+                      <tr>
+                        <td>Phí xử lý thanh toán</td>
+                        <td>0d</td>
+                      </tr>
+                      <tr>
+                        <td>Giảm giá</td>
+                        <td>0d</td>
+                      </tr>
+                      <tr>
+                        <td>Tổng cộng</td>
+                        <td>
+                          <span class="total-price">1.000.000d</span>
+                          <span class="tax-include">Giá đã bao gồm 10% thuế VAT</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
               <div class="redeem-code-wrp">
                 <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Bạn có mã giảm giá (Coupon/Promotion Code)? <i class="icon icon-plus-circle"></i></a>
                 <div class="collapse" id="collapseExample">
@@ -287,7 +369,11 @@
                     <div class="form-group">
                       <input type="text" class="form-control" placeholder="Vui lòng nhập tại đây">
                       <button class="btn btn-warning">Áp dụng</button>
-                  </div>
+                    </div>
+                    <div class="redeem-code-display">
+                        Mã đang áp dụng:
+                        <button class="btn btn-sm global-tag">BANCUAVU<i class="icon icon-cancel-circled"></i></button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -310,7 +396,7 @@
             </div>
           </div>
          
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="sub-col-box why-book">
              <h4 class="title">Tự tin đặt vé với ĐI VUI</h4>
              <ul>

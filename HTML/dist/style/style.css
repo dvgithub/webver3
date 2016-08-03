@@ -3,7 +3,8 @@
 /**************** GENERAL ****************
 *****************************************/
 body {
-  background: #f5f5f5;
+  background: #e6e6e6;
+  /**#f5f5f5;**/
   -webkit-font-smoothing: antialiased;
   line-height: 1.6;
   color: #404040;
@@ -647,6 +648,7 @@ select {
 }
 .offer-types .row {
   padding-right: 15px;
+  padding-left: 10px;
 }
 .offer-types .select {
   margin-right: 5px;
@@ -671,6 +673,7 @@ select {
 }
 .offer-types .offer-simple-product {
   padding-right: 0;
+  padding-left: 5px;
   margin-bottom: 20px;
 }
 .book-offer-wrp {
@@ -828,6 +831,7 @@ select {
   z-index: 10;
   display: inline-block;
   min-height: 150px;
+  width: 100%;
 }
 .product-card-cont-container .product-card-header {
   min-height: 75px;
@@ -947,7 +951,8 @@ select {
 .search-header-filter .search-header-filter-display-wrp {
   float: left;
 }
-.search-header-filter .search-header-filter-display-wrp .search-header-filter-pills {
+.search-header-filter-pills,
+.global-tag {
   background: white;
   color: #555555;
   font-size: 14px;
@@ -956,13 +961,16 @@ select {
   border: #eeeeee solid 1px;
   border-top: #5cb85c solid 3px;
 }
-.search-header-filter .search-header-filter-display-wrp .search-header-filter-pills i {
+.search-header-filter-pills i,
+.global-tag i {
   color: #777777;
 }
-.search-header-filter .search-header-filter-display-wrp .search-header-filter-pills:hover {
+.search-header-filter-pills:hover,
+.global-tag:hover {
   color: #222222;
 }
-.search-header-filter .search-header-filter-display-wrp .search-header-filter-pills:hover i {
+.search-header-filter-pills:hover i,
+.global-tag:hover i {
   color: #222222;
 }
 .search-header-filter.is-true {
@@ -1310,6 +1318,10 @@ select {
   background-color: #fe5815;
   border: 2px solid #fe5815;
 }
+.checkout-process--confirm .label {
+  min-width: 0;
+  left: 400%;
+}
 /* Cart */
 .cart-status,
 .customer-info-wrp,
@@ -1527,8 +1539,13 @@ select {
   text-align: right;
   margin-bottom: 20px;
 }
+.redeem-code-wrp {
+  padding: 10px 0;
+  border-top: #d5d5d5 solid 1px;
+  border-bottom: #d5d5d5 solid 1px;
+}
 .redeem-code-wrp .form-group {
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 .redeem-code-wrp a {
   display: block;
@@ -2004,6 +2021,181 @@ select {
 .cfm-guide-btn {
   margin: 0 5px 10px 0;
 }
+.box-padding-20 {
+  background: white;
+  padding: 20px;
+}
+.confirmation-order-detail {
+  margin-bottom: 40px;
+}
+.order-status-title,
+.customer-info-review,
+.payment-method-info {
+  margin-bottom: 20px;
+}
+.order-status-title h1,
+.customer-info-review h1,
+.payment-method-info h1 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.order-status-desc {
+  font-size: 18px;
+}
+.order-status-desc .order-id span,
+.order-status-desc .order-payment-confirm span,
+.order-status-desc .email-received-duration span,
+.order-status-desc .helpful-tips span,
+.order-status-desc .order-payment-remind span {
+  display: block;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+.order-status-desc .order-id:before,
+.order-status-desc .order-payment-confirm:before,
+.order-status-desc .email-received-duration:before,
+.order-status-desc .helpful-tips:before,
+.order-status-desc .order-payment-remind:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  speak: none;
+  text-decoration: inherit;
+  line-height: 1.2;
+  float: left;
+  vertical-align: top;
+  color: #5cb85c;
+  content: '\e81a';
+  text-align: center;
+}
+.order-status-desc .order-payment-remind:before {
+  content: '\e82d';
+  color: #ff6600;
+}
+.confirmation-order-detail-list .cart-item {
+  padding: 0;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: #d5d5d5 solid 1px;
+}
+.confirmation-order-detail-list .details-price {
+  padding: 0;
+  text-align: right;
+}
+.total-price-wrp table {
+  width: 100%;
+}
+.total-price-wrp table tr {
+  display: block;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: #d5d5d5 solid 1px;
+}
+.total-price-wrp table tr:last-child {
+  border-bottom: none;
+}
+.total-price-wrp table td {
+  display: inline-block;
+}
+.total-price-wrp table tr td:first-child {
+  width: 50%;
+  float: left;
+  font-weight: bold;
+}
+.total-price-wrp table tr td:nth-child(2) {
+  width: 50%;
+  padding-left: 20px;
+  text-align: right;
+}
+.total-price-wrp table .total-price {
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+}
+.total-price-wrp table .tax-include {
+  font-style: italic;
+  font-size: 12px;
+}
+.customer-info-review table {
+  width: 100%;
+}
+.customer-info-review table tr td {
+  vertical-align: top;
+}
+.customer-info-review table tr td:first-child {
+  width: 25%;
+  padding-bottom: 10px;
+  min-width: 100px;
+  font-weight: bold;
+}
+.banking-list .bank-display-box {
+  float: left;
+  width: 100%;
+  padding: 15px;
+  border: #eeeeee solid 1px;
+  margin-bottom: 20px;
+}
+.banking-list .bank-logo {
+  width: 25%;
+  float: left;
+}
+.banking-list .bank-info {
+  float: left;
+  width: 75%;
+  padding-left: 15px;
+}
+.banking-list .bank-info ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.banking-list .bank-name {
+  font-weight: bold;
+}
+.payment-fee-description {
+  font-size: 12px;
+  font-style: italic;
+  color: #777777;
+}
+.payment-note ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+.payment-method-info .panel-title a:hover,
+.payment-method-select .panel-title a:hover,
+.payment-method-info .panel-title a:active,
+.payment-method-select .panel-title a:active,
+.payment-method-info .panel-title a:visited,
+.payment-method-select .panel-title a:visited {
+  text-decoration: none;
+}
+.payment-method-info .panel-title a:before,
+.payment-method-select .panel-title a:before,
+.payment-method-info .panel-title a.collapse:before,
+.payment-method-select .panel-title a.collapse:before {
+  margin-right: 20px;
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  speak: none;
+  text-decoration: inherit;
+  line-height: 1.2;
+  text-align: center;
+  float: left;
+  vertical-align: top;
+  color: #ff6600;
+}
+.payment-method-info .panel-title a:before,
+.payment-method-select .panel-title a:before {
+  content: '\e81b';
+}
+.payment-method-info .panel-title a.collapsed:before,
+.payment-method-select .panel-title a.collapsed:before {
+  content: '\e904';
+}
 /**************** HOMEPAGE ****************
 **********************************************/
 .intro-home {
@@ -2402,6 +2594,11 @@ select {
   .price-total,
   .price-promise {
     text-align: center;
+  }
+  .sticky-nav .product-title,
+  .sticky-nav .key-details-link,
+  .sticky-nav .guide-to-use-link {
+    display: none;
   }
 }
 @media screen and (max-width: 767px) {
