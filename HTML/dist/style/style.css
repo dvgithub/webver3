@@ -3,7 +3,7 @@
 /**************** GENERAL ****************
 *****************************************/
 body {
-  background: #e6e6e6;
+  background: #eee;
   /**#f5f5f5;**/
   -webkit-font-smoothing: antialiased;
   line-height: 1.6;
@@ -1597,14 +1597,14 @@ select {
   font-size: 18px;
 }
 .why-book .save:before {
-  content: '\ee1c';
+  content: '\eeae';
 }
 .why-book .voucher24:before {
-  content: '\ea1f';
+  content: '\ea40';
   font-size: 20px;
 }
 .why-book .support:before {
-  content: '\ecc2';
+  content: '\ea9d';
 }
 .why-book .why-book-cont-wrp {
   margin-left: 30px;
@@ -1981,7 +1981,7 @@ select {
 .collection-info {
   margin-bottom: 40px;
 }
-/**************** STATIC PAGE ****************
+/**************** STATIC PAGE / ELEMNENT ****************
 **********************************************/
 .static-page {
   padding: 50px 0 70px 0;
@@ -2009,6 +2009,35 @@ select {
 .menu-sidebar-static .active:focus {
   text-decoration: none;
 }
+.sidebar-customer-support {
+  margin: 20px 0 20px 0;
+  font-size: 12px;
+}
+.sidebar-customer-support .title {
+  margin-top: 0;
+}
+.support-info-sidebar {
+  text-align: center;
+  padding: 10px 0;
+  border-top: #d5d5d5 solid 1px;
+  border-bottom: #d5d5d5 solid 1px;
+  margin-bottom: 20px;
+}
+.support-info-sidebar .hotline {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 120%;
+}
+.support-info-sidebar .hotline:before {
+  content: '\e872';
+  color: #5cb85c;
+  padding-right: 10px;
+}
+.faq {
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
+}
 /**************** CONFIRMATION ****************
 **********************************************/
 .confirmation-page {
@@ -2025,14 +2054,24 @@ select {
   background: white;
   padding: 20px;
 }
-.confirmation-order-detail {
-  margin-bottom: 40px;
+.greeting-message {
+  text-align: right;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
 }
+.divuiteam {
+  color: #ff6600;
+}
+.order-status,
+.confirmation-order-detail,
 .order-status-title,
 .customer-info-review,
 .payment-method-info {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
+.order-status h1,
+.confirmation-order-detail h1,
 .order-status-title h1,
 .customer-info-review h1,
 .payment-method-info h1 {

@@ -7,7 +7,7 @@
 *****************************************/
 
 body {
-	background: #e6e6e6; /**#f5f5f5;**/
+	background: #eee; /**#f5f5f5;**/
 	-webkit-font-smoothing: antialiased;
 	line-height: 1.6;
 	color: @gray-dark
@@ -1678,9 +1678,9 @@ border-radius:0;
 		color: @brand-success;
 		font-size: @font-size-large
 	}
-	.save:before {content: '\ee1c';}
-	.voucher24:before {content: '\ea1f';font-size: 20px}
-	.support:before {content: '\ecc2'}
+	.save:before {content: '\eeae';}
+	.voucher24:before {content: '\ea40';font-size: 20px}
+	.support:before {content: '\ea9d'}
 
 	.why-book-cont-wrp {
 		margin-left: 30px;
@@ -2046,7 +2046,7 @@ border-radius:0;
 
 
 
-/**************** STATIC PAGE ****************
+/**************** STATIC PAGE / ELEMNENT ****************
 **********************************************/
 .static-page {
 	padding: 50px 0 70px 0;
@@ -2077,6 +2077,38 @@ border-radius:0;
 	}
 }
 
+.sidebar-customer-support {
+	.title {
+		margin-top: 0;
+	}
+	margin: 20px 0 20px 0;
+	font-size: @font-size-small
+}
+
+.support-info-sidebar {
+	text-align: center;
+	padding: 10px 0;
+	border-top: darken(@gray-lighter, 10%) solid 1px;
+	border-bottom: darken(@gray-lighter, 10%) solid 1px;
+	margin-bottom: 20px;
+	.hotline {
+		font-weight: bold;
+		font-size: @font-size-h3;
+		line-height: 120%;
+		&:before {
+			content: '\e872';
+			color: @brand-success;
+			padding-right: 10px;
+			}
+		}
+}
+
+.faq {
+		text-align: center;
+		font-size: @font-size-small;
+		font-style: italic;
+	}
+
 /**************** CONFIRMATION ****************
 **********************************************/
 
@@ -2091,12 +2123,19 @@ border-radius:0;
 	padding: 20px;
 }
 
-.confirmation-order-detail {
-	margin-bottom: 40px;
+.greeting-message {
+	text-align: right;
+	font-size: @font-size-h4;
+	font-style: italic;
+	font-weight: bold;
 }
 
-.order-status-title, .customer-info-review, .payment-method-info {
-	margin-bottom: 20px;
+.divuiteam {
+	color: @brand-warning
+}
+
+.order-status, .confirmation-order-detail, .order-status-title, .customer-info-review, .payment-method-info {
+	margin-bottom: 40px;
 
 	h1 {
 		font-weight: bold;
