@@ -177,7 +177,7 @@ select {
   padding: 0;
   margin: 20px 0 10px 0;
   list-style: none;
-  background-color: none;
+  background-color: #eee;
   border-radius: 0;
 }
 /* Rating */
@@ -526,7 +526,8 @@ select {
 .key-details .tour-confirmation:before,
 .key-details .mobile-voucher:before,
 .key-details .cancellation-policy:before,
-.key-details .instant-confirmation:before {
+.key-details .instant-confirmation:before,
+.key-details .voucher-confirm:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -560,13 +561,16 @@ select {
   content: '\ecc0';
 }
 .key-details .tour-confirmation:before {
-  content: '\eb8b';
+  content: '\e9d8';
 }
 .key-details .cancellation-policy:before {
   content: '\ebff';
 }
-.key-details .instant-confirmation {
+.key-details .instant-confirmation:before {
   content: '\ed1f';
+}
+.key-details .voucher-confirm:before {
+  content: '\e868';
 }
 /* Product Booking */
 .product-booking .offers-form,
@@ -1797,11 +1801,50 @@ select {
   color: white;
   text-decoration: none;
 }
+.useful-info-wrp {
+  /*
+	.useful-info--language:before, .useful-info--timezone:before, .useful-info--phonecode:before, .useful-info--currency:before, .useful-info--time2vist:before, .useful-info--address:before, .useful-info--timing:before, .useful-info--duration:before, .useful-info--ticket:before, .useful-info--tips:before {
+		position: absolute;
+		top: 20px;
+		left: 10px;
+		font-size: 30px;
+		color: @gray-light;
+		font-family: "fontello";
+	    font-style: normal;
+	    font-weight: normal;
+	    font-size: @font-size-h3;
+	    speak: none;
+	    text-decoration: inherit;
+	    line-height: 1.2;
+	    text-align: center;
+	    float: left;
+	    vertical-align: top;
+	    content: '\e81a';
+	    text-align: center;
+	}
+	.useful-info--language:before {content: '\e85c'}
+	.useful-info--timezone:before {content: '\eb64'}
+	.useful-info--phonecode:before {content: '\e872'}
+	.useful-info--currency:before {content: '\e91a'}
+	.useful-info--time2vist:before {content: '\ea2b'}
+	.useful-info--address:before {content: '\eaf5';}
+	.useful-info--timing:before {content: '\e883';}
+	.useful-info--duration:before {content: '\ecfa';}
+	.useful-info--ticket:before {content: '\eb8b';}
+	.useful-info--tips:before {content: '\e82d';}*/
+}
+.useful-info-wrp h4 {
+  margin-bottom: 20px;
+}
 .useful-info-wrp .useful-info-list-item-cont {
   margin-bottom: 20px;
   padding: 10px 0;
   border-top: #d5d5d5 solid 1px;
   position: relative;
+  min-height: 120px;
+}
+.useful-info-wrp .useful-info-list-item:last-child {
+  width: 100%;
 }
 .useful-info-wrp .useful-info-list-item-label,
 .useful-info-wrp .useful-info-list-item-value {
@@ -1812,51 +1855,68 @@ select {
   font-size: 14px;
   margin-bottom: 5px;
 }
-.useful-info-wrp .useful-info--language:before,
-.useful-info-wrp .useful-info--timezone:before,
-.useful-info-wrp .useful-info--phonecode:before,
-.useful-info-wrp .useful-info--currency:before,
-.useful-info-wrp .useful-info--time2vist:before,
 .useful-info-wrp .useful-info--address:before,
-.useful-info-wrp .useful-info--timing:before,
-.useful-info-wrp .useful-info--duration:before,
-.useful-info-wrp .useful-info--ticket:before,
-.useful-info-wrp .useful-info--tips:before {
+.useful-info-wrp .useful-info--currency:before,
+.useful-info-wrp .useful-info-timezone:before,
+.useful-info-wrp .useful-info-phonecode:before,
+.useful-info-wrp .language:before,
+.useful-info-wrp .BestTimeToTravel:before,
+.useful-info-wrp .Address:before,
+.useful-info-wrp .Location:before,
+.useful-info-wrp .Duration:before,
+.useful-info-wrp .EntranceTicket:before,
+.useful-info-wrp .OtherTravelTips:before,
+.useful-info-wrp .OpeningTime:before {
   position: absolute;
   top: 20px;
   left: 10px;
   font-size: 30px;
   color: #777777;
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  speak: none;
+  text-decoration: inherit;
+  line-height: 1.2;
+  float: left;
+  vertical-align: top;
+  content: '\e81a';
+  text-align: center;
 }
-.useful-info-wrp .useful-info--language:before {
-  content: '\e85c';
+.useful-info-wrp .BestTimeToTravel:before {
+  content: '\ee6c';
 }
-.useful-info-wrp .useful-info--timezone:before {
-  content: '\eb64';
+.useful-info-wrp .Address:before,
+.useful-info-wrp .Location:before {
+  content: '\eaf5';
 }
-.useful-info-wrp .useful-info--phonecode:before {
+.useful-info-wrp .Duration:before {
+  content: '\ecfa';
+}
+.useful-info-wrp .OpeningTime:before {
+  content: '\e9db';
+}
+.useful-info-wrp .EntranceTicket:before {
+  content: '\eb8b';
+}
+.useful-info-wrp .OtherTravelTips:before {
+  content: '\eb1c';
+}
+.useful-info-wrp .language:before {
+  content: '\e85a';
+}
+.useful-info-wrp .useful-info-phonecode:before {
   content: '\e872';
+}
+.useful-info-wrp .useful-info-timezone:before {
+  content: '\e8d5';
 }
 .useful-info-wrp .useful-info--currency:before {
   content: '\e91a';
 }
-.useful-info-wrp .useful-info--time2vist:before {
-  content: '\ea2b';
-}
 .useful-info-wrp .useful-info--address:before {
   content: '\eaf5';
-}
-.useful-info-wrp .useful-info--timing:before {
-  content: '\e883';
-}
-.useful-info-wrp .useful-info--duration:before {
-  content: '\ecfa';
-}
-.useful-info-wrp .useful-info--ticket:before {
-  content: '\eb8b';
-}
-.useful-info-wrp .useful-info--tips:before {
-  content: '\e82d';
 }
 /* Image box */
 .image-box,
@@ -2359,6 +2419,9 @@ select {
 }
 .newsletter-subcribe-form-input {
   margin-top: 30px;
+}
+.newsletter-subcribe-form-input button {
+  width: 120px;
 }
 .hp-why-choose-us-list {
   margin-bottom: 10px;
