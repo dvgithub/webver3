@@ -511,16 +511,17 @@ border-radius:0;
 	margin-bottom: 30px;
 
 	h2 {
-		border-bottom: solid @gray-lighter 1px;
+		border-bottom: darken(@gray-lighter, 8%) solid 1px;
 		padding-bottom: 20px;
 		margin-bottom: 0px;
 	}
 
 	.key-details-item {
-		border-bottom: 1px solid @gray-lighter;
+		border-bottom: darken(@gray-lighter, 8%) solid 1px;
 	    padding: 10px 0;
 	    min-height: 25px;
 	    overflow: hidden;
+	    &:last-child {border-bottom: none}
 	    &:before {
 	    	min-width: 30px;
 	    	text-align: center;
@@ -772,6 +773,9 @@ border-radius:0;
 	.review-cont {
 		padding-bottom: 20px;
 		border-bottom: @gray-lighter solid 1px;
+		&:last-child {
+			border-bottom: none;
+		}
 	}
 	.review:first-child {
 		.review-cont {
@@ -1936,7 +1940,7 @@ border-radius:0;
 	.useful-info--ticket:before {content: '\eb8b';}
 	.useful-info--tips:before {content: '\e82d';}*/
 
-	.useful-info--address, .useful-info--currency, .useful-info-timezone, .useful-info-phonecode, .language, .BestTimeToTravel, .Address, .Location, .Duration, .EntranceTicket, .OtherTravelTips, .OpeningTime  {
+	.useful-info--timezone, .useful-info--language, .useful-info--address, .useful-info--currency, .useful-info-timezone, .useful-info-phonecode, .language, .BestTimeToTravel, .Address, .Location, .Duration, .EntranceTicket, .OtherTravelTips, .OpeningTime  {
 		&:before {
 			position: absolute;
 			top: 20px;
@@ -1965,9 +1969,10 @@ border-radius:0;
 	.OtherTravelTips:before  					{content: '\eb1c'}
 	.language:before  							{content: '\e85a'}
 	.useful-info-phonecode:before 						{content: '\e872'}
-	.useful-info-timezone:before  						{content: '\e8d5' }
+	.useful-info--timezone:before  						{content: '\e8d5' }
 	.useful-info--currency:before {content: '\e91a'}
 	.useful-info--address:before {content: '\eaf5';}
+	.useful-info--language:before {content: '\e85c'}
 }
 
 /* Image box */
@@ -2107,23 +2112,34 @@ border-radius:0;
 **********************************************/
 .static-page {
 	padding: 50px 0 70px 0;
-	background: white;
 
 	.page-title {
 		margin-top: 10px
 	}
+
+	h1 {
+		margin-bottom: 40px;
+	}
 }
+
+.group-sidebar-menu {
+	.group-sidebar-menu-title {
+		margin-bottom: 10px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+}
+
 .menu-sidebar-static {
 	ul {
 		padding-left: 0;
-		padding-top: 20px;
 	}
 	li {
 		list-style-type: none;
-		padding: 8px 0
+		padding: 5px 0;
 	}
+
 	a {
-		font-size: 16px;
 		font-weight: bold;
 	}
 	.active {
@@ -2506,7 +2522,7 @@ border-radius:0;
 }
 .newsletter-subcribe-wrp {
 	padding: 20px;
-	background: @gray-lighter
+	background: white
 }
 .newsletter-subcribe-form-input {
 	margin-top: 30px;
@@ -2724,7 +2740,7 @@ border-radius:0;
 	padding-left: 0;
 	li {
 		list-style-type: none;
-		padding-left: 0;
+		padding: 3px 0
 	}
 }
 
@@ -2742,6 +2758,32 @@ border-radius:0;
 	a {
 		color: @gray-light
 	}
+}
+
+.hotline {
+	font-size: 24px;
+	color: @brand-success;
+	i {
+		font-size: 24px;
+		&:before {
+			margin-left: 0
+		}
+	}
+}
+
+.social-connect{
+	i {
+		font-size: 28px;
+		&:before {
+			margin-left: 0
+		}
+	}
+}
+
+.company-info {
+	text-align: center;
+	border-top: @gray solid 1px;
+	padding-top: 20px;
 }
 
 .footer-content-pri {

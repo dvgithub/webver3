@@ -13,7 +13,13 @@ $(document).ready(function(){
     var toggleposition = $('.dv-page-header').position().top
 					+$('.dv-page-header').outerHeight(true)
 					+$('.product-header').outerHeight(true)
-					+$('.breadcrumb').outerHeight(true);
+					+$('.breadcrumb').outerHeight(true)
+          +$('.product-title').outerHeight(true)
+          +$('.product-rating-location').outerHeight(true)
+          +$('.key-details').outerHeight(true)
+          +$('.product-booking').outerHeight(true)
+          +$('.overview').outerHeight(true)
+          +$('.product-highlights').outerHeight(true);
 	
     if(scrolltop >= toggleposition) {
       $('.sticky-nav').fadeIn(250);

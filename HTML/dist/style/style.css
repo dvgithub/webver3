@@ -478,15 +478,18 @@ select {
   margin-bottom: 30px;
 }
 .key-details h2 {
-  border-bottom: solid #eeeeee 1px;
+  border-bottom: #dadada solid 1px;
   padding-bottom: 20px;
   margin-bottom: 0px;
 }
 .key-details .key-details-item {
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: #dadada solid 1px;
   padding: 10px 0;
   min-height: 25px;
   overflow: hidden;
+}
+.key-details .key-details-item:last-child {
+  border-bottom: none;
 }
 .key-details .key-details-item:before {
   min-width: 30px;
@@ -718,6 +721,9 @@ select {
 .customer-review .review-cont {
   padding-bottom: 20px;
   border-bottom: #eeeeee solid 1px;
+}
+.customer-review .review-cont:last-child {
+  border-bottom: none;
 }
 .customer-review .review:first-child .review-cont {
   border-top: none;
@@ -1855,6 +1861,8 @@ select {
   font-size: 14px;
   margin-bottom: 5px;
 }
+.useful-info-wrp .useful-info--timezone:before,
+.useful-info-wrp .useful-info--language:before,
 .useful-info-wrp .useful-info--address:before,
 .useful-info-wrp .useful-info--currency:before,
 .useful-info-wrp .useful-info-timezone:before,
@@ -1909,7 +1917,7 @@ select {
 .useful-info-wrp .useful-info-phonecode:before {
   content: '\e872';
 }
-.useful-info-wrp .useful-info-timezone:before {
+.useful-info-wrp .useful-info--timezone:before {
   content: '\e8d5';
 }
 .useful-info-wrp .useful-info--currency:before {
@@ -1917,6 +1925,9 @@ select {
 }
 .useful-info-wrp .useful-info--address:before {
   content: '\eaf5';
+}
+.useful-info-wrp .useful-info--language:before {
+  content: '\e85c';
 }
 /* Image box */
 .image-box,
@@ -2045,21 +2056,26 @@ select {
 **********************************************/
 .static-page {
   padding: 50px 0 70px 0;
-  background: white;
 }
 .static-page .page-title {
   margin-top: 10px;
 }
+.static-page h1 {
+  margin-bottom: 40px;
+}
+.group-sidebar-menu .group-sidebar-menu-title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 .menu-sidebar-static ul {
   padding-left: 0;
-  padding-top: 20px;
 }
 .menu-sidebar-static li {
   list-style-type: none;
-  padding: 8px 0;
+  padding: 5px 0;
 }
 .menu-sidebar-static a {
-  font-size: 16px;
   font-weight: bold;
 }
 .menu-sidebar-static .active {
@@ -2415,7 +2431,7 @@ select {
 }
 .newsletter-subcribe-wrp {
   padding: 20px;
-  background: #eeeeee;
+  background: white;
 }
 .newsletter-subcribe-form-input {
   margin-top: 30px;
@@ -2621,7 +2637,7 @@ select {
 }
 .box-link-list li {
   list-style-type: none;
-  padding-left: 0;
+  padding: 3px 0;
 }
 .page-footer {
   margin-top: 30px;
@@ -2635,6 +2651,27 @@ select {
 }
 .page-footer a {
   color: #777777;
+}
+.hotline {
+  font-size: 24px;
+  color: #5cb85c;
+}
+.hotline i {
+  font-size: 24px;
+}
+.hotline i:before {
+  margin-left: 0;
+}
+.social-connect i {
+  font-size: 28px;
+}
+.social-connect i:before {
+  margin-left: 0;
+}
+.company-info {
+  text-align: center;
+  border-top: #555555 solid 1px;
+  padding-top: 20px;
 }
 .footer-content-pri {
   padding: 30px 0;
