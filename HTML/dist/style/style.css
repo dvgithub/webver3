@@ -1454,7 +1454,15 @@ select {
   list-style-type: none;
 }
 .checkout-button {
+  margin-bottom: 10px;
+}
+.shop-more-button {
   margin-bottom: 20px;
+  text-transform: none;
+  font-weight: normal;
+}
+.buy-more-choosing {
+  margin: 0 0 5px 0;
 }
 /* Customer Info */
 .customer-info-step {
@@ -2670,11 +2678,25 @@ select {
 }
 .company-info {
   text-align: center;
-  border-top: #555555 solid 1px;
-  padding-top: 20px;
+}
+.bo-cong-thuong {
+  text-align: right;
 }
 .footer-content-pri {
   padding: 30px 0;
+}
+.footer-content-sec {
+  padding-top: 30px;
+  border-top: #777777 solid 1px;
+}
+.need-support {
+  text-align: center;
+}
+.payment-accept-info-icon a {
+  display: inline-block;
+  background: url(http://alpha.divui.com/content/images/all-icons.png);
+  width: 66px;
+  height: 52px;
 }
 @media screen and (max-width: 859px) {
   .location-banner-container {
